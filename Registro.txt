@@ -1,2 +1,5 @@
 Este es el archivo de registro para el proyecto, es este
 pondre fecha y dire directivas del proyecto
+
+
+##gitkraken
