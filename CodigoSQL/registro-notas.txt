@@ -1,3 +1,4 @@
 ##Este es el registro de Notas de la base de datos##
 
 1. Creacion de la base de datos
+2. se hizo la primera plantilla de la base de datos 18/09/2024 por: Andres Angel
