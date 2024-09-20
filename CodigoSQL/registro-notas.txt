@@ -1,0 +1,3 @@
+##Este es el registro de Notas de la base de datos##
+
+1. Creacion de la base de datos
