@@ -1,0 +1,7 @@
+#######¡IMPORTANTE!#######
+ Este es el codigo fuente de la aplicacion aqui pueden bajar el codigo
+completo y editarlo, recuerden mantener el registro de cambios y los repos 
+locale sactualizado con este antes de subir o manipular el codigo.
+
+Fecha de aviso: 03-10-2024
+Por: Andres Angel - andresangel5c@gmail.com
