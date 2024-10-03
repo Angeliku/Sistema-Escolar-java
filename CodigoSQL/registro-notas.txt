@@ -2,3 +2,7 @@
 
 1. Creacion de la base de datos
 2. se hizo la primera plantilla de la base de datos 18/09/2024 por: Andres Angel
+
+###Actualizacion####
+La base de datos fue actualizada, se agregaron nuevas tables y relaciones a su contenido
+03/10/2024 Andres Angel.
