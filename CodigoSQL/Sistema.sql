@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-09-2024 a las 15:16:17
+-- Tiempo de generación: 03-10-2024 a las 19:30:46
 -- Versión del servidor: 11.5.2-MariaDB
 -- Versión de PHP: 8.3.10
 
@@ -24,10 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `Aulas`
+--
+
+CREATE TABLE `Aulas` (
+  `id` int(11) NOT NULL,
+  `año` varchar(3) NOT NULL,
+  `seccion` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `Estudiantes`
 --
 
 CREATE TABLE `Estudiantes` (
+  `id` int(11) NOT NULL,
   `cedula` varchar(25) NOT NULL,
   `primer_nombre` varchar(30) NOT NULL,
   `segundo_nombre` varchar(30) DEFAULT NULL,
@@ -59,6 +72,17 @@ INSERT INTO `Materias` (`Codigo`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `Matricula`
+--
+
+CREATE TABLE `Matricula` (
+  `id_aula` int(11) NOT NULL,
+  `cedula_estuadiante` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `Usuario`
 --
 
@@ -74,16 +98,30 @@ CREATE TABLE `Usuario` (
 --
 
 --
+-- Indices de la tabla `Aulas`
+--
+ALTER TABLE `Aulas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `Estudiantes`
 --
 ALTER TABLE `Estudiantes`
-  ADD PRIMARY KEY (`cedula`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cedula` (`cedula`);
 
 --
 -- Indices de la tabla `Materias`
 --
 ALTER TABLE `Materias`
   ADD PRIMARY KEY (`Codigo`);
+
+--
+-- Indices de la tabla `Matricula`
+--
+ALTER TABLE `Matricula`
+  ADD KEY `id_aula` (`id_aula`),
+  ADD KEY `cedula_estuadiante` (`cedula_estuadiante`);
 
 --
 -- Indices de la tabla `Usuario`
@@ -96,10 +134,33 @@ ALTER TABLE `Usuario`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `Aulas`
+--
+ALTER TABLE `Aulas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `Estudiantes`
+--
+ALTER TABLE `Estudiantes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `Usuario`
 --
 ALTER TABLE `Usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `Matricula`
+--
+ALTER TABLE `Matricula`
+  ADD CONSTRAINT `Matricula_ibfk_1` FOREIGN KEY (`id_aula`) REFERENCES `Aulas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `Matricula_ibfk_2` FOREIGN KEY (`cedula_estuadiante`) REFERENCES `Estudiantes` (`cedula`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
