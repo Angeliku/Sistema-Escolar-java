@@ -1,5 +1,14 @@
 Este es el archivo de registro para el proyecto, es este
 pondre fecha y dire directivas del proyecto
 
-
-##gitkraken
+################################################################################
+Tenemos 1 año y 6 meses aproximado para completar el proyecto
+asi que propongo la siguiente lineas de accion:
+  1. completar en lo posible de proyecto escrito
+  2. una vez que el proyecto este listo y la aplicacion tenga su primera 
+     funciones lista inicia con la redaccion del manual
+  3. repartir eficientemente responsabilidad para aumentar la productividad
+por ahora esto ya esta el codigo fuente inicial dentro del repositorio.
+                                   
+                                            - andres angel - 03/10/2024.
+################################################################################
