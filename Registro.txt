@@ -12,3 +12,10 @@ por ahora esto ya esta el codigo fuente inicial dentro del repositorio.
                                    
                                             - andres angel - 03/10/2024.
 ################################################################################
+
+################################################################################
+ Ya la clase de conexion esta lista y publicada, recuerde que a la hora de usar el codigo en local
+tiene que cambiar las variables "user" y "pass" de la clase "ConexionBD" por los nombre de usuario y clave que tengan configurados 
+en su base de datos en la pila XAMPP.
+                                            - andres angel - 04/10/20024.
+################################################################################
