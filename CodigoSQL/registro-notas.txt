@@ -6,3 +6,7 @@
 ###Actualizacion####
 La base de datos fue actualizada, se agregaron nuevas tables y relaciones a su contenido
 03/10/2024 Andres Angel.
+
+##########################
+base de datos actualizada por favor usar la version 05-10-2024
+          -  Andres Angel -
