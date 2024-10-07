@@ -22,7 +22,7 @@ public class Login extends javax.swing.JFrame {
     }
     @Override
     public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/icono(96).png"));
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/Frmlogin.png"));
          return retValue;       
      }
     /**
@@ -330,8 +330,10 @@ public class Login extends javax.swing.JFrame {
                 
                 if(controlUsuario.loginUser(usuario)){
                     
-                    JOptionPane.showMessageDialog(null, "Login correcto...");
-                    
+                    //JOptionPane.showMessageDialog(null, "Login correcto...");
+                    FrmMenu menu1 = new FrmMenu();
+                    menu1.setVisible(true);
+                    this.dispose();
                 }else {
                     JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrectos");
                 }
