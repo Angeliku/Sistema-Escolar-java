@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/controlador/Ctrl_Representante.java</file>
+            <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/vista/Inter_representante.java</file>
+            <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/modelo/Representante.java</file>
+            <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/coneccion/Conexion.java</file>
+            <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/modelo/Usuario.java</file>
             <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/controlador/Ctrl_Usuario.java</file>
-            <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/vista/Login.java</file>
             <file>file:/home/andres/NetBeansProjects/SGEMaferu/src/vista/FrmMenu.java</file>
         </group>
     </open-files>

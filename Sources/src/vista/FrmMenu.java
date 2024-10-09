@@ -2,12 +2,15 @@
 package vista;
 
 import java.awt.Dimension;
+import javax.swing.JDesktopPane;
 
 /**
  *
  * @author andres
  */
 public class FrmMenu extends javax.swing.JFrame {
+    
+    public static JDesktopPane jdesktop_menu;
 
     public FrmMenu() {
         initComponents();
@@ -15,6 +18,16 @@ public class FrmMenu extends javax.swing.JFrame {
         this.setExtendedState(this.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
         this.setTitle("Menu Principal");
+        
+        this.setLayout(null);
+        jdesktop_menu = new JDesktopPane();
+        
+        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+        this.jdesktop_menu.setBounds(0, 0, ancho ,(alto - 110));
+        this.add(jdesktop_menu);
+        
+        
         
     }
 
@@ -45,6 +58,7 @@ public class FrmMenu extends javax.swing.JFrame {
         gestion_aula = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -95,6 +109,11 @@ public class FrmMenu extends javax.swing.JFrame {
         nuevo_representante.setFont(new java.awt.Font("DejaVu Serif", 0, 13)); // NOI18N
         nuevo_representante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo-cliente.png"))); // NOI18N
         nuevo_representante.setText("Nuevo Representante");
+        nuevo_representante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevo_representanteActionPerformed(evt);
+            }
+        });
         jMenu3.add(nuevo_representante);
 
         gestion_rep.setFont(new java.awt.Font("DejaVu Serif", 0, 13)); // NOI18N
@@ -153,10 +172,22 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenu7.setPreferredSize(new java.awt.Dimension(150, 50));
         jMenuBar1.add(jMenu7);
 
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cerrar-sesion.png"))); // NOI18N
+        jMenu8.setText("Cerrar");
+        jMenu8.setFont(new java.awt.Font("DejaVu Serif", 1, 14)); // NOI18N
+        jMenu8.setPreferredSize(new java.awt.Dimension(150, 50));
+        jMenuBar1.add(jMenu8);
+
         setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void nuevo_representanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevo_representanteActionPerformed
+        Inter_representante intercate = new Inter_representante();
+        jdesktop_menu.add(intercate);
+        intercate.setVisible(true);
+    }//GEN-LAST:event_nuevo_representanteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,6 +238,7 @@ public class FrmMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem nuevo_docente;
     private javax.swing.JMenuItem nuevo_estudiante;
